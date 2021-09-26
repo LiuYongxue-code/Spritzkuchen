@@ -1,0 +1,17 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}
+    \addplot3 [
+        surf,
+        domain    = 0:360,
+        y domain  = 0:360,
+        samples   = 50,
+        samples y = 20,
+      ]
+      ( {cos(x)*(sin(3*x) + 1.25)},
+        {y}, {sin(x)*(sin(3*x) + 1.25)} );
+  \end{axis}
+\end{tikzpicture}
+\end{document}

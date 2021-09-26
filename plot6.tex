@@ -1,0 +1,32 @@
+
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usetikzlibrary{backgrounds}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[axis equal,
+      hide axis,
+      /tikz/background rectangle/.style = {
+        left color    = black,
+        right color   = black!20,
+        shading angle = 135,
+      },
+      show background rectangle
+    ]
+    \addplot3[
+      surf,
+      shader      = flat,
+      miter limit = 1,
+      domain      = 0:360,
+      y domain    = 0:360,
+      samples     = 100,
+      samples y   = 70,
+      z buffer    = sort,
+      colormap/hot2,
+    ]
+    ( {(6+(sin(3*(x+3*y))+1.25)*cos(x))*cos(y)},
+      {(6+(sin(3*(x+3*y))+1.25)*cos(x))*sin(y)},
+      {((sin(3*(x+3*y))+1.25)*sin(x))} );
+  \end{axis}
+\end{tikzpicture}
+\end{document} 

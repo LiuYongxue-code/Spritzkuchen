@@ -1,0 +1,11 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}
+    \addplot3 [domain=0:360, samples=100, fill=blue!30, opacity=0.8]
+      ( {cos(x)*(sin(3*x) + 1.25)},
+        {sin(x)*(sin(3*x) + 1.25)}, 0);
+  \end{axis}
+\end{tikzpicture}
+\end{document} 

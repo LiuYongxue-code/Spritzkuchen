@@ -1,0 +1,20 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[axis equal]
+    \addplot3[
+      surf,
+      domain    = 0:360,
+      y domain  = 0:360,
+      samples   = 100,
+      samples y = 70,
+      z buffer  = sort,
+      colormap/cool,
+    ]
+    ( {(6+(sin(3*(x+3*y))+1.25)*cos(x))*cos(y)},
+      {(6+(sin(3*(x+3*y))+1.25)*cos(x))*sin(y)},
+      {((sin(3*(x+3*y))+1.25)*sin(x))} );
+    \end{axis}
+\end{tikzpicture}
+\end{document}

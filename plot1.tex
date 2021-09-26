@@ -1,0 +1,12 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\begin{document}
+\begin{tikzpicture}
+  \begin{polaraxis}
+    \addplot[mark=none, domain=0:360, samples=200]
+      {sin(3*x) + 1.25};
+  \end{polaraxis}
+\end{tikzpicture}
+
+\end{document} 

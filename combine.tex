@@ -1,0 +1,18 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\begin{document}
+\begin{tikzpicture}
+\node[scale=2,orange!80!red] at (0,4){\bfseries Spritzkuchen in Space};
+  \node at (-8,8){\includegraphics[scale=1]{plot1}};
+  \node at (0,8){\includegraphics[scale=1]{plot2}};
+  \node at (8,8){\includegraphics[scale=1]{plot3}};
+  \node at (-8,0){\includegraphics[scale=1]{plot4}};
+  \node at (0,0){\includegraphics[scale=1]{plot4a}};
+  \node at (8,0){\includegraphics[scale=1]{plot5a}};
+  \node at (-8,-8){\includegraphics[scale=1]{plot5}};
+  \node at (0,-8){\includegraphics[scale=1]{plot6a}};
+  \node at (8,-8){\includegraphics[scale=1]{plot6}};
+\end{tikzpicture}
+
+\end{document} 
